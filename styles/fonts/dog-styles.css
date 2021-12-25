@@ -1,15 +1,15 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background-color: rgba(37, 37, 104, 0.911);
+    justify-content: right;
+    background-color: rgba(33, 117, 138, 0.911);
     /* align-items: center; */
 }
 .thumbnails-list {
     display: flex;
     flex-direction:column;
     flex-wrap: wrap;
-    max-height: 350px;
+    max-height: 25vh;
     overflow-y: auto;
     justify-content: left;
     list-style:none;
@@ -30,46 +30,118 @@ body {
 }
 .details-container{
     display: flex;
-    flex-direction: column;
-    /* align-items:flex-end; */
-    position: fixed;
-    justify-content: right;
-    right: 20vw;
+    flex-direction:column;
+    align-items:flex-end;
+    position: relative;
     
 }
 .thumbnails-title{
     display: block;
     text-align: center;
-    background-color: white;
+    background-color: beige;
     color: blue;
     font-size: 1.2rem;
-    border-radius: 0px 0px 25px 25px;
-
 }
 .details-item{
     margin-top: 2vh;
 }
 .details-title{
-    position:relative;
-    right: 2vw;
-    top: 45vw;
-    border-style: solid;
-    border-color: orangered;
-    padding: auto;
-    background-color: orangered;
-    font-style: italic;
-    font-size: auto; 
+    background-color: rgb(224, 89, 10);
+    background-size: auto;
     color: white;
-} 
+    font-style: italic;
+    font-size: auto;
+    position: absolute;
+    left: 35vw;
+    bottom: 1vw;
+    text-align: center;
+}
 .thumbnails-item{
     margin-top:  2vh;
-    margin-left: 0vw;
-    border: 2px solid white;
-    border-radius: 25px;
-
+    margin-left: 2vw;
+    /* border: 1px solid blue; */
 }
 .thumbnails-anchor{
     text-decoration: none;
+}
+.logo-title{
+    background-color: darkgoldenrod;
+    color: rgb(24, 34, 6);
+    text-align:left;
+    text-transform: uppercase;
+}
+
+body, html{
+    height: 100%;
+}
+@media (min-width: 568px) {
+    .thumbnails-list{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        order: -1;
+        max-height: 350px;
+        overflow-y: auto;
+        justify-content: left;
+        list-style:none;
+        padding: 0;
+        padding-top: 2.5vh;
+    }
+    .thumbnails-title{
+        width: 20vw;
+        display: block;
+        text-align: center;
+        background-color: white;
+        color: blue;
+        font-size: 1.2rem;
+        border-radius: 0px 0px 25px 25px;
+    }
+    .thumbnails-item{
+        margin-top:  2vh;
+        margin-left: 1vw;
+        /* border: 2px solid white;
+        border-radius: 20px; */
+    }
+    .thumbnails-image {
+        width: 20vw;
+        height: 15vw;
+        display: block;
+        /* border-radius: 25px 25px 0px 0px;
+        border: 2px solid white; */
+    }
+    .details-image{
+        width: 60vw;
+        height: 50vw;
+        position: absolute;
+    
+    }
+    .details-container{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-end;
+        position: relative;
+        justify-content: right;
+        right: 10vw;
+        top: 10vh;
+        bottom: 90vh;
+    }
+    .details-item{
+        margin-top: 0vh;
+    }
+    .details-title{
+        position:relative;
+        left: -15vw;
+        top: 45vw;
+        border-style: solid;
+        border-color: orangered;
+        padding: auto;
+        background-color: orangered;
+        font-style: italic;
+        font-size: auto;  
+        color: white;
+    } 
+} 
+.thumbnails-anchor{
+    text-decoration:none;
 }
 .logo-title{
     background-color: lightblue;
@@ -78,31 +150,16 @@ body {
     text-transform: uppercase;
     font-size: 10px;
     position: relative;
+    padding: 0 auto;
 }
-
 body, html{
     height: 100%;
 }
 .footer-title{
-background-color: lightblue;
-background-size: auto;
-color: rgb(24, 34, 6);
-text-align:center;
-font-size: 10px;
-position: relative;
-}
-
-
-@media (min-width: 568px) {
-    .thumbnails-list{
-        flex-direction: column;
-        flex-wrap: nowrap;
-        order: -1;
+    background-color: lightblue;
+    background-size: auto;
+    color: rgb(24, 34, 6);
+    text-align:center;
+    font-size: 10px;
+    position: relative;
     }
-    .thumbnails-title{
-        width: 20vw;
-    }
-    .thumbnails-item{
-        max-width: 20vw;
-    }
-}
