@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     justify-content: right;
     background-color: rgba(33, 117, 138, 0.911);
+    margin: 0 auto;
     /* align-items: center; */
 }
 .thumbnails-list {
