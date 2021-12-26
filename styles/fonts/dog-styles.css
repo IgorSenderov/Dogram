@@ -26,6 +26,7 @@ body {
     width: 60vw;
     height: 50vw;
     position: absolute;
+    margin-top: 2vh;    
 
 }
 .details-container{
@@ -52,14 +53,15 @@ body {
     font-style: italic;
     font-size: auto;
     position: absolute;
-    left: 35vw;
-    bottom: 1vw;
+    left: 5vw;
+    top: 25vh;
     text-align: center;
 }
 .thumbnails-item{
-    margin-top:  2vh;
+    margin-top:  20vh;
     margin-left: 2vw;
     /* border: 1px solid blue; */
+
 }
 .thumbnails-anchor{
     text-decoration: none;
@@ -69,7 +71,17 @@ body {
     color: rgb(24, 34, 6);
     text-align:left;
     text-transform: uppercase;
+    margin-top: 0vh;
 }
+.footer-title{
+    background-color: lightblue;
+    background-size: auto;
+    color: rgb(24, 34, 6);
+    text-align:center;
+    font-size: 10px;
+    position: relative;
+    margin-top: 640;
+    }
 
 body, html{
     height: 100%;
