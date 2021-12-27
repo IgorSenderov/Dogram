@@ -1,68 +1,94 @@
+@font-face{
+    font-family: lakeshor;
+    src: url(fonts\LAKESHOR-webfont.svg);
+    src: url(fonts\LAKESHOR-webfont.woff);
+}
+@font-face{
+    font-family: airstream;
+    src: url(fonts\LAKESHOR-webfont.svg);
+    src: url(fonts\LAKESHOR-webfont.woff);
+}
+:root{
+    --thumbnails-image-width: 20vw;
+    --thubnails-image-height: 18vw;
+    --thubnails-title-height: calc(var(--thubnails-image-height)*0.25);
+}
 body {
     display: flex;
     flex-direction: column;
-    justify-content: right;
+    justify-content: space-around;
     background-color: rgba(33, 117, 138, 0.911);
     margin: 0 auto;
     /* align-items: center; */
 }
+
 .thumbnails-list {
     display: flex;
-    flex-direction:column;
+    flex-direction:row;
     flex-wrap: wrap;
     max-height: 25vh;
     overflow-y: auto;
-    justify-content: left;
+    justify-content: sp;
     list-style:none;
     padding: 0;
     padding-top: 2.5vh;
 }
 .thumbnails-image {
-    width: 20vw;
-    height: 15vw;
+    width: var(--thumbnails-image-width);
+    height: var(--thubnails-image-height);
     display: block;
     border-radius: 25px 25px 0px 0px;
 }
 .details-image{
-    width: 60vw;
-    height: 50vw;
-    position: absolute;
-    margin-top: 2vh;    
+    width: 80vw;
+    height: 65vw;
+    border-radius: 25%;
+    /* /* position: absolute; */
+    /* margin-top: 2vh;  */
 
 }
 .details-container{
     display: flex;
     flex-direction:column;
-    align-items:flex-end;
+    align-items:center;
     position: relative;
     
 }
 .thumbnails-title{
     display: block;
     text-align: center;
-    background-color: beige;
+    background-color: white;
     color: blue;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    border-radius: 0px 0px 25px 25px ;
+   width: var(--thumbnails-image-width);
+   height: var(--thubnails-title-height);
 }
 .details-item{
     margin-top: 2vh;
 }
 .details-title{
     background-color: rgb(224, 89, 10);
-    background-size: auto;
+    /* background-size: auto; */
+    /* position: absolute; */
     color: white;
-    font-style: italic;
-    font-size: auto;
     position: absolute;
-    left: 5vw;
-    top: 25vh;
+    /* font-size: auto; */
+    left: 3vw;
+    right: 2vw;
+    /* top: 25vh; */
     text-align: center;
+    font-family: airstream;
+    font-style: italic;
 }
 .thumbnails-item{
-    margin-top:  20vh;
+    margin-top:  2vh;
     margin-left: 2vw;
-    /* border: 1px solid blue; */
-
+    border: 1px solid white;
+    border-radius: 25%;
+    max-width: var(--thumbnails-image-width);
+    min-height: calc(var(--thubnails-image-height)+var(--thubnails-title-height));
+    overflow: hidden;
 }
 .thumbnails-anchor{
     text-decoration: none;
@@ -70,91 +96,103 @@ body {
 .logo-title{
     background-color: darkgoldenrod;
     color: rgb(24, 34, 6);
-    text-align:left;
+    font-size: 2rem;
+    text-align: center;
     text-transform: uppercase;
     margin-top: 0vh;
 }
 .footer-title{
     background-color: lightblue;
-    background-size: auto;
-    color: rgb(24, 34, 6);
+     color: rgb(24, 34, 6);
+     font-size: 10px;
+     background-size: auto;
     text-align:center;
-    font-size: 10px;
     position: relative;
-    margin-top: 640;
+    margin-bottom: 0vh;
     }
 
 body, html{
     height: 100%;
 }
 @media (min-width: 568px) {
-    
+    :root{
+        --thumbnails-image-width: 20vw;
+        --thubnails-image-height: 10vw;
+        --thubnails-title-height: calc(var(--thubnails-image-height)*0.25);
+    }
     .thumbnails-list{
+        display: inline;
         flex-direction: column;
         flex-wrap: nowrap;
         order: -1;
-        max-height: 350px;
-        overflow-y: auto;
-        justify-content: left;
+        max-height: 70vh;
+        overflow: auto;
+        justify-content: flex-start;
         list-style:none;
         padding: 0;
         padding-top: 2.5vh;
-        margin: 0 auto;
+        /* margin: 0 auto; */
     }
     .thumbnails-title{
-        width: 18vw;
-        display: block;
+        /* width: 18vw; 
+        font-size: 1rem;
+        height: 3vw;
+        display: flex;
         text-align: center;
         background-color: white;
-        color: blue;
-        font-size: 1.2rem;
-        border-radius: 0px 0px 25px 25px;
-    }
+        color: blue;      
+        border-radius: 25%;
+    } */
     .thumbnails-item{
-        margin-top:  2vw;
-        margin-left: 1vw;       
-        /* border: 2px solid white;
-        border-radius: 20px; */
+        /* max-width: 18vw; */
+        margin-left: 1vw;    
+        /* border-radius: 25px;    */
+        /* border: 2px solid white; */
+        
     }
-    .thumbnails-image {
+    /* .thumbnails-image {
         width: 18vw;
-        height: 13vw;
-        display: flex;
+        height: 13vw; */
+        /* display: flex; */
         /* border-radius: 25px 25px 0px 0px;
         border: 2px solid white; */
     }
     .details-image{
         width: 60vw;
-        height: 50vw;
-        position: absolute;
-        margin: 0 auto;
+        height: 43vw;
+        /* position: absolute;
+        margin: 0 auto; */
     
     }
     .details-container{
-        display: flex;
+        justify-content: center;
+        /* display: flex;
         flex-direction: column;
         align-items:flex-end;
         position: relative;
-        justify-content: right;
         right: 10vw;
         top: 10vh;
-        bottom: 90vh;
+        bottom: 90vh; */
     }
     .details-item{
         margin-top: 0vh;
     }
     .details-title{
-        position:relative;
-        left: -15vw;
-        top: 45vw;
-        border-style: solid;
+       
+        left: -4vw;
+        bottom: 2vw;
+        /* border-style: solid;
         border-color: orangered;
         padding: auto;
-        background-color: orangered;
+        background-color: orangered; */
         font-style: italic;
         font-size: auto;  
         color: white;
     } 
+    .main-content{
+        display: flex;
+        justify-content: space-around;
+    }
 } 
 .thumbnails-anchor{
     text-decoration:none;
@@ -169,8 +207,9 @@ body, html{
     padding: 0 auto;
     margin: 0 auto;
 }
-/* body, html{
-    height: 100%; */
+body, html{
+    justify-content: space-between;
+    margin: 0vw;
 }
 .footer-title{
     background-color: lightblue;
