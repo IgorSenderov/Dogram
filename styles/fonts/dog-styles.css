@@ -9,9 +9,9 @@
     src: url(fonts\LAKESHOR-webfont.woff);
 }
 :root{
-    --thumbnails-image-width: 20vw;
-    --thubnails-image-height: 18vw;
-    --thubnails-title-height: calc(var(--thubnails-image-height)*0.25);
+    --thumbnails-image-width: 20w;
+    --thubnails-image-height: 10vw;
+    --thubnails-title-height: calc(var(--thubnails-image-height)*1);
 }
 body {
     display: flex;
@@ -28,7 +28,7 @@ body {
     flex-wrap: wrap;
     max-height: 25vh;
     overflow-y: auto;
-    justify-content: sp;
+    justify-content: space-around;
     list-style:none;
     padding: 0;
     padding-top: 2.5vh;
@@ -42,7 +42,7 @@ body {
 .details-image{
     width: 80vw;
     height: 65vw;
-    border-radius: 25%;
+    /* border-radius: 25%; */
     /* /* position: absolute; */
     /* margin-top: 2vh;  */
 
@@ -59,10 +59,10 @@ body {
     text-align: center;
     background-color: white;
     color: blue;
-    font-size: 1rem;
-    border-radius: 0px 0px 25px 25px ;
-   width: var(--thumbnails-image-width);
-   height: var(--thubnails-title-height);
+    /* font-size: 30px; */
+    border-radius: 0px 0px 25px 25px;
+    width: var(--thumbnails-image-width);
+    height: var(--thubnails-title-height);
 }
 .details-item{
     margin-top: 2vh;
@@ -76,16 +76,16 @@ body {
     /* font-size: auto; */
     left: 3vw;
     right: 2vw;
-    /* top: 25vh; */
+    top: 35vh;
     text-align: center;
-    font-family: airstream;
+    /* font-family: airstream url; */
     font-style: italic;
 }
 .thumbnails-item{
     margin-top:  2vh;
     margin-left: 2vw;
     border: 1px solid white;
-    border-radius: 25%;
+    border-radius: 25px 25px 25px 25px;
     max-width: var(--thumbnails-image-width);
     min-height: calc(var(--thubnails-image-height)+var(--thubnails-title-height));
     overflow: hidden;
@@ -94,17 +94,19 @@ body {
     text-decoration: none;
 }
 .logo-title{
-    background-color: darkgoldenrod;
+    background-color: lightblue;
     color: rgb(24, 34, 6);
-    font-size: 2rem;
-    text-align: center;
+    text-align:center;
     text-transform: uppercase;
-    margin-top: 0vh;
+    font-size: 15px;
+    position: relative;
+    padding: 0 auto;
+    margin-top: 0 auto;
 }
 .footer-title{
     background-color: lightblue;
      color: rgb(24, 34, 6);
-     font-size: 10px;
+     font-size: 15px;
      background-size: auto;
     text-align:center;
     position: relative;
@@ -133,7 +135,7 @@ body, html{
         padding-top: 2.5vh;
         /* margin: 0 auto; */
     }
-    .thumbnails-title{
+    /* .thumbnails-title{
         /* width: 18vw; 
         font-size: 1rem;
         height: 3vw;
@@ -142,7 +144,7 @@ body, html{
         background-color: white;
         color: blue;      
         border-radius: 25%;
-    } */
+    } */ 
     .thumbnails-item{
         /* max-width: 18vw; */
         margin-left: 1vw;    
@@ -156,7 +158,7 @@ body, html{
         /* display: flex; */
         /* border-radius: 25px 25px 0px 0px;
         border: 2px solid white; */
-    }
+    
     .details-image{
         width: 60vw;
         height: 43vw;
@@ -178,14 +180,15 @@ body, html{
         margin-top: 0vh;
     }
     .details-title{
-       
-        left: -4vw;
-        bottom: 2vw;
-        /* border-style: solid;
+        left: -3vw;
+        top: 40vw;
+        /* bottom: 3vw; */
+        border-style: solid;
         border-color: orangered;
-        padding: auto;
-        background-color: orangered; */
+        /* padding: auto; */
+        background-color: orangered;
         font-style: italic;
+        font-size: 15px;
         font-size: auto;  
         color: white;
     } 
@@ -193,7 +196,7 @@ body, html{
         display: flex;
         justify-content: space-around;
     }
-} 
+
 .thumbnails-anchor{
     text-decoration:none;
 }
@@ -202,14 +205,15 @@ body, html{
     color: rgb(24, 34, 6);
     text-align:center;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 15px;
     position: relative;
     padding: 0 auto;
     margin: 0 auto;
 }
 body, html{
     justify-content: space-between;
-    margin: 0vw;
+    margin: 0 auto;
+   
 }
 .footer-title{
     background-color: lightblue;
@@ -218,4 +222,10 @@ body, html{
     text-align:center;
     font-size: 10px;
     position: relative;
+    }
+    @media (min-width: 568px){
+        :root{
+            --thumbnails-image-width: 20vw;
+            --thubnails-image-height: 10vw;
+            --thubnails-title-height: calc(var(--thubnails-image-height)*0.25);
     }
